@@ -250,4 +250,27 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 8rem; }
+  .footer .nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: stretch;
+    list-style: none; }
+    .footer .nav__link:link, .footer .nav__link:visited {
+      font-size: 1.4rem;
+      color: #fff;
+      font-family: "Josefin Sans", sans-serif;
+      text-align: center;
+      padding: 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      height: 100%;
+      text-align: center;
+      display: block;
+      backface-visibility: hidden; }
+    .footer .nav__link:hover, .footer .nav__link:active {
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: translateY(-3px); }
