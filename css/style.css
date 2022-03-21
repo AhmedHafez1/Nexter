@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -19,6 +22,10 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [side-start] 8rem [side-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -82,6 +89,11 @@ body {
   grid-row: 1 / -1;
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      justify-content: end; } }
 
 .nave-btn {
   border: none;
@@ -99,6 +111,14 @@ body {
     transform: translateY(-1.5rem); }
   .nave-btn::after {
     transform: translateY(1.3rem); }
+  @media only screen and (max-width: 62.5em) {
+    .nave-btn {
+      margin-top: 3rem;
+      margin-right: 3rem; }
+      .nave-btn::before {
+        transform: translateY(-1.2rem); }
+      .nave-btn::after {
+        transform: translateY(1rem); } }
 
 .header {
   background-color: #54483a;
