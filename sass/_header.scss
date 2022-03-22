@@ -4,6 +4,14 @@
   padding-top: 4rem;
   grid-column: full-start / col-end 6;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 4rem;
+  }
+
   background-image: linear-gradient(
       rgba($color-secondary, 0.93),
       rgba($color-secondary, 0.87)
